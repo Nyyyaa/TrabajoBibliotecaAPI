@@ -20,7 +20,7 @@ GET http://localhost:8080/api/v1/autores
 
 GET http://localhost:8080/api/v1/autores/1
 
-## 🔹 POST /api/v1/autores (Crear un nuevo autor y con sus libros)
+## 🔹 POST /api/v1/autores (Crear un nuevo autor sin o con sus libros)
 
 POST http://localhost:8080/api/v1/autores
 
