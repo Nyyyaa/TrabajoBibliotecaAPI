@@ -1,5 +1,6 @@
 package com.bibliotecaapi.demo.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +15,7 @@ public class Libro {
 
     @ManyToOne
     @JoinColumn(name = "autor_id", nullable = false)
+    @JsonBackReference
     private Autor autor;
 
     public Libro() {

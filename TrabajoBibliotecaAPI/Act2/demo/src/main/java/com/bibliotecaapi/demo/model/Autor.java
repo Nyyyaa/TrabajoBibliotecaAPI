@@ -2,6 +2,8 @@ package com.bibliotecaapi.demo.model;
 
 import java.util.List;
 
+import com.fasterxml.jackson.annotation.JsonManagedReference;
+
 import jakarta.persistence.*;
 
 @Entity
@@ -14,6 +16,7 @@ public class Autor {
     private String nacionalidad;
 
     @OneToMany(mappedBy = "autor", cascade = CascadeType.ALL, orphanRemoval = true)
+    @JsonManagedReference
     private List<Libro> libros;
 
     public Autor() {
@@ -57,5 +60,4 @@ public class Autor {
         this.libros = libros;
     }
 
-    
 }
